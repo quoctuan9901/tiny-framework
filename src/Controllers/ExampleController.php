@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 use App\Queries\SqlQuery;
-use ApiResponse;
+use Scaleflex\Commons\ApiResponse;
 
 class ExampleController extends BaseController {
 

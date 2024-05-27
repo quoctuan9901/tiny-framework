@@ -2,6 +2,7 @@
 
 use App\Controllers\LogsController;
 use App\Controllers\ExampleController;
+use Scaleflex\Commons\ApiResponse;
 
 $router->prefix('api')->group(function () use ($router) {
     $router->get('demo/{param}/{paramDefault?}', [ExampleController::class, 'exampleDemoAction']);
@@ -10,5 +11,5 @@ $router->prefix('api')->group(function () use ($router) {
 });
 
 $router->fallback(function () {
-    return "Route is not found";
+    return ApiResponse::error("Route not found", [], 404);
 });

@@ -2,6 +2,8 @@
 
 namespace App\Queries;
 
+use Scaleflex\Commons\Query;
+
 class SqlQuery
 {
     public static function getDemo()

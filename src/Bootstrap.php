@@ -14,6 +14,7 @@ use Illuminate\Routing\UrlGenerator;
 use Illuminate\Routing\Pipeline;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Http\Request as IlluminateRequest;
+use Scaleflex\Commons\Helper;
 
 class Bootstrap
 {
@@ -92,7 +93,7 @@ class Bootstrap
 
     protected function bootDatabase() {
         $capsule = new Capsule;
-        $capsule->addConnection(config('database', 'pgsql'), 'default');
+        $capsule->addConnection(Helper::config('database', 'pgsql'), 'default');
         $capsule->setEventDispatcher(new Dispatcher(new Container));
         $capsule->setAsGlobal();
         $capsule->bootEloquent();

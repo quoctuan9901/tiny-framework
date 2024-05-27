@@ -2,10 +2,9 @@
 
 namespace App\Controllers;
 use App\Queries\SqlQuery;
-use ApiResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
-use Illuminate\Http\Response;
+use Scaleflex\Commons\ApiResponse;
 
 class LogsController extends BaseController
 {
